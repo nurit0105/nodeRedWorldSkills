@@ -16,6 +16,14 @@
         "env": []
     },
     {
+        "id": "8eac1701882bf4b1",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "3aaffa94.740bee",
         "type": "ui_base",
         "theme": {
