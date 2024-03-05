@@ -344,5 +344,22 @@
         "x": 420,
         "y": 140,
         "wires": []
+    },
+    {
+        "id": "63f539abf2a4d3d7",
+        "type": "complete",
+        "z": "6fc07a4979ba489a",
+        "name": "",
+        "scope": [
+            "ebd66245f149f086"
+        ],
+        "uncaught": false,
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "ebd66245f149f086"
+            ]
+        ]
     }
 ]
