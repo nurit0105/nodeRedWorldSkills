@@ -1,11 +1,164 @@
 [
     {
-        "id": "95e7755cdc4389ae",
+        "id": "f3d5f4aa350bc8c7",
         "type": "tab",
-        "label": "Flow_test",
+        "label": "Basics",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ccb1e78f.c9f478",
+        "type": "tab",
+        "label": "Browser Flow",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "c96319e69d220e50",
+        "type": "tab",
+        "label": "Challenge1",
         "disabled": false,
         "info": "",
         "env": []
+    },
+    {
+        "id": "2121ca907b3ee80f",
+        "type": "tab",
+        "label": "Challenge2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0478b31567810a5b",
+        "type": "group",
+        "z": "f3d5f4aa350bc8c7",
+        "name": "Switch",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c01beca4f027e654",
+            "54e63d99f7dcfd7c",
+            "030a0c2671d8e6e5",
+            "9c36830d4acb3cd1",
+            "b7b2722d10b83708",
+            "d7ec7ea53cfbbc33",
+            "bdf2efb3281c1244"
+        ],
+        "x": 34,
+        "y": 179,
+        "w": 552,
+        "h": 162
+    },
+    {
+        "id": "de357da84e3c3ca8",
+        "type": "group",
+        "z": "f3d5f4aa350bc8c7",
+        "name": "msg.types",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "fe82e6a1df43ae37",
+            "3b973df7b726dd89",
+            "6b969288f344e12a"
+        ],
+        "x": 34,
+        "y": 39,
+        "w": 352,
+        "h": 122
+    },
+    {
+        "id": "0c1f6de453cf612a",
+        "type": "group",
+        "z": "f3d5f4aa350bc8c7",
+        "name": "Change",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "0faf8ac79bc640e0",
+            "9996a089df01fce5",
+            "2e477aff369d685b",
+            "ba80d8e1454c5d4d"
+        ],
+        "x": 34,
+        "y": 379,
+        "w": 632,
+        "h": 122
+    },
+    {
+        "id": "5c0f3a80edc94014",
+        "type": "group",
+        "z": "f3d5f4aa350bc8c7",
+        "name": "Verzögerung",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "27054b8e035a3224",
+            "103bb2099455e6e8",
+            "af02d391e000cc0d"
+        ],
+        "x": 34,
+        "y": 539,
+        "w": 592,
+        "h": 82
+    },
+    {
+        "id": "a606e9c04d918040",
+        "type": "group",
+        "z": "f3d5f4aa350bc8c7",
+        "name": "Test Gruppe",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#bfbfbf",
+            "label": true
+        },
+        "nodes": [
+            "ba4f1f963fee92c7",
+            "f778a541827a378f",
+            "3662d015bb447584",
+            "ccd129e89b9d2899",
+            "80116ae47db898de"
+        ],
+        "x": 34,
+        "y": 679,
+        "w": 692,
+        "h": 122
+    },
+    {
+        "id": "ea87d98ca030dc8a",
+        "type": "junction",
+        "z": "ccb1e78f.c9f478",
+        "x": 320,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "245185307dc9647b",
+        "type": "junction",
+        "z": "ccb1e78f.c9f478",
+        "x": 320,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eea5e70546d147d5",
+        "type": "junction",
+        "z": "ccb1e78f.c9f478",
+        "x": 540,
+        "y": 180,
+        "wires": [
+            [
+                "cacd1f94c82dd384"
+            ]
+        ]
     },
     {
         "id": "6dec04321af50090",
@@ -168,351 +321,6 @@
         }
     },
     {
-        "id": "40a9bb2c.3e2f14",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
-        "id": "69b2f12e.f763c8",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
-        "id": "f3d5f4aa350bc8c7",
-        "type": "tab",
-        "label": "Basics",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "ccb1e78f.c9f478",
-        "type": "tab",
-        "label": "Browser Flow",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "c96319e69d220e50",
-        "type": "tab",
-        "label": "Challenge1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "0478b31567810a5b",
-        "type": "group",
-        "z": "f3d5f4aa350bc8c7",
-        "name": "Switch",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "c01beca4f027e654",
-            "54e63d99f7dcfd7c",
-            "030a0c2671d8e6e5",
-            "9c36830d4acb3cd1",
-            "b7b2722d10b83708",
-            "d7ec7ea53cfbbc33",
-            "bdf2efb3281c1244"
-        ],
-        "x": 34,
-        "y": 179,
-        "w": 552,
-        "h": 162
-    },
-    {
-        "id": "de357da84e3c3ca8",
-        "type": "group",
-        "z": "f3d5f4aa350bc8c7",
-        "name": "msg.types",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "fe82e6a1df43ae37",
-            "3b973df7b726dd89",
-            "6b969288f344e12a"
-        ],
-        "x": 34,
-        "y": 39,
-        "w": 352,
-        "h": 122
-    },
-    {
-        "id": "0c1f6de453cf612a",
-        "type": "group",
-        "z": "f3d5f4aa350bc8c7",
-        "name": "Change",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "0faf8ac79bc640e0",
-            "9996a089df01fce5",
-            "2e477aff369d685b",
-            "ba80d8e1454c5d4d"
-        ],
-        "x": 34,
-        "y": 379,
-        "w": 632,
-        "h": 122
-    },
-    {
-        "id": "5c0f3a80edc94014",
-        "type": "group",
-        "z": "f3d5f4aa350bc8c7",
-        "name": "Verzögerung",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "27054b8e035a3224",
-            "103bb2099455e6e8",
-            "af02d391e000cc0d"
-        ],
-        "x": 34,
-        "y": 539,
-        "w": 592,
-        "h": 82
-    },
-    {
-        "id": "a606e9c04d918040",
-        "type": "group",
-        "z": "f3d5f4aa350bc8c7",
-        "name": "Test Gruppe",
-        "style": {
-            "stroke": "#000000",
-            "fill": "#bfbfbf",
-            "label": true
-        },
-        "nodes": [
-            "ba4f1f963fee92c7",
-            "f778a541827a378f",
-            "3662d015bb447584",
-            "ccd129e89b9d2899",
-            "80116ae47db898de"
-        ],
-        "x": 34,
-        "y": 679,
-        "w": 692,
-        "h": 122
-    },
-    {
-        "id": "ea87d98ca030dc8a",
-        "type": "junction",
-        "z": "ccb1e78f.c9f478",
-        "x": 320,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "245185307dc9647b",
-        "type": "junction",
-        "z": "ccb1e78f.c9f478",
-        "x": 320,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "eea5e70546d147d5",
-        "type": "junction",
-        "z": "ccb1e78f.c9f478",
-        "x": 540,
-        "y": 180,
-        "wires": [
-            [
-                "cacd1f94c82dd384"
-            ]
-        ]
-    },
-    {
         "id": "129d71c8.8a2eee",
         "type": "ui_tab",
         "name": "Dasboard",
@@ -532,102 +340,6 @@
         "collapse": false
     },
     {
-        "id": "7bc56b7f421ff5f4",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD.MM.YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
         "id": "3ba37fd4.6558f",
         "type": "ui_group",
         "name": "Example Flow",
@@ -639,6 +351,24 @@
     },
     {
         "id": "72415252.b2cadc",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3287af1f51a40f86",
+        "type": "ui_group",
+        "name": "Standard",
+        "tab": "0d5ac747e2e3f5b8",
+        "order": 1,
+        "disp": true,
+        "width": 14,
+        "collapse": false
+    },
+    {
+        "id": "0d5ac747e2e3f5b8",
         "type": "ui_tab",
         "name": "Home",
         "icon": "dashboard",
@@ -1486,6 +1216,71 @@
         "statusType": "auto",
         "x": 520,
         "y": 200,
+        "wires": []
+    },
+    {
+        "id": "344f14dbf2c48d5b",
+        "type": "inject",
+        "z": "2121ca907b3ee80f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "400adccd891a3217"
+            ]
+        ]
+    },
+    {
+        "id": "400adccd891a3217",
+        "type": "function",
+        "z": "2121ca907b3ee80f",
+        "name": "function 16",
+        "func": "// Retrieve the initialized number and added percentage\nvar initialisedNumber = global.get(\"generatedNumber\");\nvar addedPercentage = global.get(\"percentage\");\n\n// Update the added percentage for each iteration\naddedPercentage = addedPercentage * 1.1;\n\n// Save the updated added percentage back to the global context\nglobal.set(\"percentage\", addedPercentage);\n\n// Calculate the new number with the updated percentage\nvar newNumber = parseFloat(addedPercentage * initialisedNumber).toFixed(1);\n\n// Set the new number in the payload\nmsg.payload = newNumber;\n\n// Return the message object\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Initialize the added percentage and generated number at start\nvar addedPercentage = 1.1;\nvar generatedNumber = parseFloat((Math.random() * (6 - 2) + 2)).toFixed(1);\n\nglobal.set(\"generatedNumber\", generatedNumber);\nglobal.set(\"percentage\", addedPercentage);\n",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 160,
+        "wires": [
+            [
+                "467f38923ed533c9"
+            ]
+        ]
+    },
+    {
+        "id": "467f38923ed533c9",
+        "type": "debug",
+        "z": "2121ca907b3ee80f",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 160,
         "wires": []
     }
 ]
