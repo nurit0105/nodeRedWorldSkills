@@ -1,16 +1,8 @@
 [
     {
-        "id": "8eac1701882bf4b1",
-        "type": "tab",
-        "label": "Laura:Challenge_1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "95e7755cdc4389ae",
         "type": "tab",
-        "label": "Laura:Challenge_2",
+        "label": "Flow_test",
         "disabled": false,
         "info": "",
         "env": []
@@ -366,70 +358,5 @@
                 "py": 0
             }
         }
-    },
-    {
-        "id": "c0e0aa49ee0f93a1",
-        "type": "inject",
-        "z": "8eac1701882bf4b1",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 220,
-        "y": 360,
-        "wires": [
-            [
-                "f9b7faf7a1e41b5e"
-            ]
-        ]
-    },
-    {
-        "id": "f9b7faf7a1e41b5e",
-        "type": "function",
-        "z": "8eac1701882bf4b1",
-        "name": "function 1",
-        "func": "var date = new Date(msg.payload);\n\nvar hours = date.getHours().toString().padStart(2, '0');\nvar minutes = date.getMinutes().toString().padStart(2,'0');\nvar seconds = date.getSeconds().toString().padStart(2,'0');\n\nvar time = `${hours}:${minutes}:${seconds}`;\n\nmsg.payload = time;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 400,
-        "y": 360,
-        "wires": [
-            [
-                "ff49d7d2047b8a9b"
-            ]
-        ]
-    },
-    {
-        "id": "ff49d7d2047b8a9b",
-        "type": "debug",
-        "z": "8eac1701882bf4b1",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 360,
-        "wires": []
     }
 ]
