@@ -161,70 +161,6 @@
         ]
     },
     {
-        "id": "6dec04321af50090",
-        "type": "mqtt-broker",
-        "name": "RaspberryPi",
-        "broker": "localhost",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "667515fe16598f42",
-        "type": "ui_group",
-        "name": "Shapes",
-        "tab": "f273d4af16f9a764",
-        "order": 1,
-        "disp": true,
-        "width": 14,
-        "collapse": false
-    },
-    {
-        "id": "f273d4af16f9a764",
-        "type": "ui_tab",
-        "name": "Shapes",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "93fae4f98fb26898",
-        "type": "ui_group",
-        "name": "Function",
-        "tab": "a07e435a3a0251e7",
-        "order": 1,
-        "disp": true,
-        "width": 10,
-        "collapse": false
-    },
-    {
-        "id": "a07e435a3a0251e7",
-        "type": "ui_tab",
-        "name": "Chart",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "3aaffa94.740bee",
         "type": "ui_base",
         "theme": {
@@ -321,51 +257,15 @@
         }
     },
     {
-        "id": "129d71c8.8a2eee",
-        "type": "ui_tab",
-        "name": "Dasboard",
-        "icon": "Dashboard",
-        "order": 13,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "bc077635.9bfc58",
-        "type": "ui_group",
-        "name": "Dashboard-glob",
-        "tab": "129d71c8.8a2eee",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "3ba37fd4.6558f",
-        "type": "ui_group",
-        "name": "Example Flow",
-        "tab": "72415252.b2cadc",
-        "order": 1,
-        "disp": true,
-        "width": "8",
-        "collapse": false
-    },
-    {
-        "id": "72415252.b2cadc",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "3287af1f51a40f86",
         "type": "ui_group",
-        "name": "Standard",
+        "name": "Challenge 2",
         "tab": "0d5ac747e2e3f5b8",
         "order": 1,
         "disp": true,
-        "width": 14,
-        "collapse": false
+        "width": "14",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "0d5ac747e2e3f5b8",
@@ -1232,14 +1132,14 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "1",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
+        "x": 110,
         "y": 160,
         "wires": [
             [
@@ -1252,7 +1152,7 @@
         "type": "function",
         "z": "2121ca907b3ee80f",
         "name": "Math be Mathing",
-        "func": "var initialisedNumber = global.get(\"generatedNumber\");\nvar addPercentage = global.get(\"addPercentage\");\nvar removePercentage = global.get(\"removePercentage\");\nvar numberAddRemovePercent = Math.random();\nvar newNumber;\n\nif (numberAddRemovePercent > 0.5) {\n    newNumber = parseFloat((addPercentage * initialisedNumber).toFixed(1));\n    if(newNumber >= 5.5){\n        newNumber = parseFloat((removePercentage * initialisedNumber).toFixed(1));\n        console.log(\" Removing 10% to not get over 6\", newNumber);\n    }\n    \n} else {\n    newNumber = parseFloat((removePercentage * initialisedNumber).toFixed(1));\n    if(newNumber <= 2.2 ){\n        newNumber = parseFloat((addPercentage * initialisedNumber).toFixed(1));\n        console.log(\" Removing 10% to not get lower 2\", newNumber);\n    }\n}\n\nglobal.set(\"addPercentage\", addPercentage);\nglobal.set(\"removePercentage\", removePercentage);\n\nglobal.set(\"generatedNumber\", newNumber);\n\n\nmsg.payload = newNumber;\n\nreturn msg; ",
+        "func": "var initialisedNumber = global.get(\"generatedNumber\");\nvar addPercentage = global.get(\"addPercentage\");\nvar removePercentage = global.get(\"removePercentage\");\nvar numberAddRemovePercent = Math.random();\nvar newNumber;\n\nif (numberAddRemovePercent > 0.5) {\n    newNumber = parseFloat((addPercentage * initialisedNumber).toFixed(1));\n    if(newNumber >= 5.5){\n        newNumber = parseFloat((removePercentage * initialisedNumber).toFixed(1));\n    }\n    \n} else {\n    newNumber = parseFloat((removePercentage * initialisedNumber).toFixed(1));\n    if(newNumber <= 2.2 ){\n        newNumber = parseFloat((addPercentage * initialisedNumber).toFixed(1));\n    }\n}\n\nglobal.set(\"addPercentage\", addPercentage);\nglobal.set(\"removePercentage\", removePercentage);\nglobal.set(\"generatedNumber\", newNumber);\n\n\nmsg.payload = newNumber;\n\nreturn msg; ",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1264,7 +1164,8 @@
         "wires": [
             [
                 "8aff1399de838c28",
-                "8935b8f9b04e1b65"
+                "8935b8f9b04e1b65",
+                "341b13a59ea621a0"
             ]
         ]
     },
@@ -1280,7 +1181,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 720,
+        "x": 740,
         "y": 120,
         "wires": []
     },
@@ -1289,7 +1190,7 @@
         "type": "function",
         "z": "2121ca907b3ee80f",
         "name": "Saving60Secondy",
-        "func": "var currentTime = new Date().getTime();\nvar savedData = context.get(\"savedData\") || [];\n\nsavedData.push(\n    { \n        value: msg.payload,\n        timestamp: currentTime \n        }\n        );\n\nvar lastSixtySecondsData = savedData.filter(\n    output => currentTime - output.timestamp <= 60000\n    );\n\ncontext.set(\"savedData\", lastSixtySecondsData); //context = node-red specialty\n\nvar min = Math.min(...lastSixtySecondsData.map(output => output.value));\nvar max = Math.max(...lastSixtySecondsData.map(output => output.value));\nvar mean = lastSixtySecondsData.reduce((sum, output) => sum + output.value, 0) / lastSixtySecondsData.length;\n\n// Output the results\nmsg.payload = {\n    min: min,\n    max: max,\n    mean: mean\n};\n\nreturn msg;\n",
+        "func": "var currentTime = new Date().getTime();\nvar savedData = context.get(\"savedData\") || [];\n\nsavedData.push(\n    { \n        value: msg.payload,\n        timestamp: currentTime \n        }\n        );\n\nvar lastSixtySecondsData = savedData.filter(\n    output => currentTime - output.timestamp <= 60000\n    );\n\ncontext.set(\"savedData\", lastSixtySecondsData); //context = node-red specialty like global or flow\n\nvar min = Math.min(...lastSixtySecondsData.map(output => output.value));\nvar max = Math.max(...lastSixtySecondsData.map(output => output.value));\nvar mean = lastSixtySecondsData.reduce((sum, output) => sum + output.value, 0) / lastSixtySecondsData.length;\n\nmsg.payload = {\n    min: min,\n    max: max,\n    mean: mean\n};\n\nglobal.set(\"min\",min);\nglobal.set(\"max\",max);\nglobal.set(\"mean\",mean);\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1300,7 +1201,8 @@
         "y": 160,
         "wires": [
             [
-                "467f38923ed533c9"
+                "467f38923ed533c9",
+                "eebcb8763bab4f63"
             ]
         ]
     },
@@ -1319,5 +1221,70 @@
         "x": 500,
         "y": 220,
         "wires": []
+    },
+    {
+        "id": "341b13a59ea621a0",
+        "type": "ui_chart",
+        "z": "2121ca907b3ee80f",
+        "name": "",
+        "group": "3287af1f51a40f86",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 490,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eebcb8763bab4f63",
+        "type": "ui_template",
+        "z": "2121ca907b3ee80f",
+        "group": "3287af1f51a40f86",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<p>Min: {{msg.payload.min}}</p>\n<p>Max: {{msg.payload.max}}</p>\n<p>Mean: {{msg.payload.mean}}</p>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 800,
+        "y": 160,
+        "wires": [
+            []
+        ]
     }
 ]
