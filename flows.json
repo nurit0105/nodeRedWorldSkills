@@ -1251,19 +1251,20 @@
         "id": "400adccd891a3217",
         "type": "function",
         "z": "2121ca907b3ee80f",
-        "name": "function 16",
-        "func": "// Retrieve the initialized number and added percentage\nvar initialisedNumber = global.get(\"generatedNumber\");\nvar addedPercentage = global.get(\"percentage\");\n\n// Update the added percentage for each iteration\naddedPercentage = addedPercentage * 1.1;\n\n// Save the updated added percentage back to the global context\nglobal.set(\"percentage\", addedPercentage);\n\n// Calculate the new number with the updated percentage\nvar newNumber = parseFloat(addedPercentage * initialisedNumber).toFixed(1);\n\n// Set the new number in the payload\nmsg.payload = newNumber;\n\n// Return the message object\nreturn msg;\n",
+        "name": "Math be Mathing",
+        "func": "var initialisedNumber = global.get(\"generatedNumber\");\nvar addPercentage = global.get(\"addPercentage\");\nvar removePercentage = global.get(\"removePercentage\");\nvar numberAddRemovePercent = Math.random();\nvar newNumber;\n\nif (numberAddRemovePercent > 0.5) {\n    newNumber = parseFloat((addPercentage * initialisedNumber).toFixed(1));\n    if(newNumber >= 5.5){\n        newNumber = parseFloat((removePercentage * initialisedNumber).toFixed(1));\n        console.log(\" Removing 10% to not get over 6\", newNumber);\n    }\n    \n} else {\n    newNumber = parseFloat((removePercentage * initialisedNumber).toFixed(1));\n    if(newNumber <= 2.2 ){\n        newNumber = parseFloat((addPercentage * initialisedNumber).toFixed(1));\n        console.log(\" Removing 10% to not get lower 2\", newNumber);\n    }\n}\n\nglobal.set(\"addPercentage\", addPercentage);\nglobal.set(\"removePercentage\", removePercentage);\n\nglobal.set(\"generatedNumber\", newNumber);\n\n\nmsg.payload = newNumber;\n\nreturn msg; ",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "// Initialize the added percentage and generated number at start\nvar addedPercentage = 1.1;\nvar generatedNumber = parseFloat((Math.random() * (6 - 2) + 2)).toFixed(1);\n\nglobal.set(\"generatedNumber\", generatedNumber);\nglobal.set(\"percentage\", addedPercentage);\n",
+        "initialize": "var generatedNumber = parseFloat((Math.random() * (6 - 2) + 2).toFixed(1));\n\nglobal.set(\"generatedNumber\", generatedNumber);\nglobal.set(\"addPercentage\", 1.1);\nglobal.set(\"removePercentage\", 0.9); ",
         "finalize": "",
         "libs": [],
-        "x": 310,
+        "x": 330,
         "y": 160,
         "wires": [
             [
-                "467f38923ed533c9"
+                "8aff1399de838c28",
+                "8935b8f9b04e1b65"
             ]
         ]
     },
@@ -1279,8 +1280,44 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 540,
+        "x": 720,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "8aff1399de838c28",
+        "type": "function",
+        "z": "2121ca907b3ee80f",
+        "name": "Saving60Secondy",
+        "func": "var currentTime = new Date().getTime();\nvar savedData = context.get(\"savedData\") || [];\n\nsavedData.push(\n    { \n        value: msg.payload,\n        timestamp: currentTime \n        }\n        );\n\nvar lastSixtySecondsData = savedData.filter(\n    output => currentTime - output.timestamp <= 60000\n    );\n\ncontext.set(\"savedData\", lastSixtySecondsData); //context = node-red specialty\n\nvar min = Math.min(...lastSixtySecondsData.map(output => output.value));\nvar max = Math.max(...lastSixtySecondsData.map(output => output.value));\nvar mean = lastSixtySecondsData.reduce((sum, output) => sum + output.value, 0) / lastSixtySecondsData.length;\n\n// Output the results\nmsg.payload = {\n    min: min,\n    max: max,\n    mean: mean\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
         "y": 160,
+        "wires": [
+            [
+                "467f38923ed533c9"
+            ]
+        ]
+    },
+    {
+        "id": "8935b8f9b04e1b65",
+        "type": "debug",
+        "z": "2121ca907b3ee80f",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 220,
         "wires": []
     }
 ]
