@@ -30,6 +30,14 @@
         "env": []
     },
     {
+        "id": "e0e961b4aebdd3ff",
+        "type": "tab",
+        "label": "FunnyWeirdOwnChallenge",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "0478b31567810a5b",
         "type": "group",
         "z": "f3d5f4aa350bc8c7",
@@ -129,6 +137,35 @@
         "h": 122
     },
     {
+        "id": "c59573e850c6beda",
+        "type": "group",
+        "z": "f3d5f4aa350bc8c7",
+        "name": "MySQL Example",
+        "style": {
+            "fill": "#ffefbf",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "8145e77bde5dc885",
+            "dcbe52fbd76e9f5f",
+            "4b3f6e61046e4855",
+            "79c6b7e2bc7f8615",
+            "c66308eb7e9ce199",
+            "c56fdf4a051d0e6b",
+            "355a79275d6a9b1a",
+            "1e3b6127a1a36218",
+            "f90c532ce825d2d5",
+            "28096233281177f6",
+            "af57c0ebf9ed4c95",
+            "f7ce0803f92621a7"
+        ],
+        "x": 34,
+        "y": 919,
+        "w": 892,
+        "h": 162
+    },
+    {
         "id": "ea87d98ca030dc8a",
         "type": "junction",
         "z": "ccb1e78f.c9f478",
@@ -164,7 +201,7 @@
         "id": "3aaffa94.740bee",
         "type": "ui_base",
         "theme": {
-            "name": "theme-light",
+            "name": "theme-dark",
             "lightTheme": {
                 "default": "#0094CE",
                 "baseColor": "#0094CE",
@@ -176,54 +213,56 @@
                 "default": "#097479",
                 "baseColor": "#097479",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
+                "edited": true,
+                "reset": false
             },
             "customTheme": {
                 "name": "Untitled Theme 1",
                 "default": "#4B7930",
                 "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
             },
             "themeState": {
                 "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
+                    "default": "#097479",
+                    "value": "#097479",
                     "edited": false
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
+                    "value": "#097479",
                     "edited": false
                 },
                 "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
                     "value": "#111111",
                     "edited": false
                 },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
                 "widget-backgroundColor": {
-                    "value": "#0094ce",
+                    "value": "#097479",
                     "edited": false
                 },
                 "widget-borderColor": {
-                    "value": "#ffffff",
+                    "value": "#333333",
                     "edited": false
                 },
                 "base-font": {
@@ -240,8 +279,8 @@
         "site": {
             "name": "Node-RED Dashboard",
             "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
+            "allowSwipe": "true",
+            "lockMenu": "true",
             "allowTempTheme": "true",
             "dateFormat": "DD/MM/YYYY",
             "sizes": {
@@ -257,23 +296,51 @@
         }
     },
     {
-        "id": "3287af1f51a40f86",
-        "type": "ui_group",
-        "name": "Challenge 2",
-        "tab": "0d5ac747e2e3f5b8",
-        "order": 1,
-        "disp": true,
-        "width": "14",
-        "collapse": false,
-        "className": ""
+        "id": "dce9a25b40f40d81",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "heart",
+        "tz": "",
+        "charset": "UTF8"
     },
     {
-        "id": "0d5ac747e2e3f5b8",
+        "id": "03a85ce256ca9d57",
+        "type": "MySQLdatabase",
+        "name": "MySQL Server",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "iot_data",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "d69605034ccd38ef",
         "type": "ui_tab",
-        "name": "Home",
+        "name": "Tab",
         "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
+        "order": 0
+    },
+    {
+        "id": "37cf765d3e2dadac",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "d69605034ccd38ef",
+        "order": null,
+        "disp": true,
+        "width": "11",
+        "collapse": true
+    },
+    {
+        "id": "b6fb597d0fbb6208",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "d69605034ccd38ef",
+        "order": 2,
+        "disp": true,
+        "width": "11",
+        "collapse": true
     },
     {
         "id": "fe82e6a1df43ae37",
@@ -860,6 +927,258 @@
         "wires": []
     },
     {
+        "id": "8145e77bde5dc885",
+        "type": "inject",
+        "z": "f3d5f4aa350bc8c7",
+        "g": "c59573e850c6beda",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 960,
+        "wires": [
+            [
+                "dcbe52fbd76e9f5f"
+            ]
+        ]
+    },
+    {
+        "id": "dcbe52fbd76e9f5f",
+        "type": "function",
+        "z": "f3d5f4aa350bc8c7",
+        "g": "c59573e850c6beda",
+        "name": "Create Table",
+        "func": "msg.topic= \"CREATE TABLE iot_factory (id SERIAL PRIMARY KEY, device_id VARCHAR(50) NOT NULL, timestamp TIMESTAMP NOT NULL, temperature FLOAT, humidity FLOAT, pressure FLOAT, status VARCHAR(20));\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 960,
+        "wires": [
+            [
+                "28096233281177f6"
+            ]
+        ]
+    },
+    {
+        "id": "4b3f6e61046e4855",
+        "type": "debug",
+        "z": "f3d5f4aa350bc8c7",
+        "g": "c59573e850c6beda",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "79c6b7e2bc7f8615",
+        "type": "inject",
+        "z": "f3d5f4aa350bc8c7",
+        "g": "c59573e850c6beda",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1000,
+        "wires": [
+            [
+                "c66308eb7e9ce199"
+            ]
+        ]
+    },
+    {
+        "id": "c66308eb7e9ce199",
+        "type": "function",
+        "z": "f3d5f4aa350bc8c7",
+        "g": "c59573e850c6beda",
+        "name": "Insert",
+        "func": "msg.topic= \"INSERT INTO iot_factory (device_id, timestamp, temperature, humidity, pressure, status) VALUES ('ABC123', NOW(), RAND() * 100, RAND() * 100, RAND() * 2000, 'OK');\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1000,
+        "wires": [
+            [
+                "af57c0ebf9ed4c95"
+            ]
+        ]
+    },
+    {
+        "id": "c56fdf4a051d0e6b",
+        "type": "debug",
+        "z": "f3d5f4aa350bc8c7",
+        "g": "c59573e850c6beda",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "355a79275d6a9b1a",
+        "type": "inject",
+        "z": "f3d5f4aa350bc8c7",
+        "g": "c59573e850c6beda",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1040,
+        "wires": [
+            [
+                "1e3b6127a1a36218"
+            ]
+        ]
+    },
+    {
+        "id": "1e3b6127a1a36218",
+        "type": "function",
+        "z": "f3d5f4aa350bc8c7",
+        "g": "c59573e850c6beda",
+        "name": "SelectAll",
+        "func": "msg.topic= \"SELECT *From iot_factory;\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1040,
+        "wires": [
+            [
+                "f7ce0803f92621a7"
+            ]
+        ]
+    },
+    {
+        "id": "f90c532ce825d2d5",
+        "type": "debug",
+        "z": "f3d5f4aa350bc8c7",
+        "g": "c59573e850c6beda",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "28096233281177f6",
+        "type": "mysql",
+        "z": "f3d5f4aa350bc8c7",
+        "d": true,
+        "g": "c59573e850c6beda",
+        "mydb": "03a85ce256ca9d57",
+        "name": "",
+        "x": 600,
+        "y": 960,
+        "wires": [
+            [
+                "4b3f6e61046e4855"
+            ]
+        ]
+    },
+    {
+        "id": "af57c0ebf9ed4c95",
+        "type": "mysql",
+        "z": "f3d5f4aa350bc8c7",
+        "d": true,
+        "g": "c59573e850c6beda",
+        "mydb": "03a85ce256ca9d57",
+        "name": "",
+        "x": 600,
+        "y": 1000,
+        "wires": [
+            [
+                "c56fdf4a051d0e6b"
+            ]
+        ]
+    },
+    {
+        "id": "f7ce0803f92621a7",
+        "type": "mysql",
+        "z": "f3d5f4aa350bc8c7",
+        "d": true,
+        "g": "c59573e850c6beda",
+        "mydb": "03a85ce256ca9d57",
+        "name": "",
+        "x": 600,
+        "y": 1040,
+        "wires": [
+            [
+                "f90c532ce825d2d5"
+            ]
+        ]
+    },
+    {
         "id": "557177b1.708e7",
         "type": "fileinject",
         "z": "ccb1e78f.c9f478",
@@ -1227,11 +1546,11 @@
         "type": "ui_chart",
         "z": "2121ca907b3ee80f",
         "name": "",
-        "group": "3287af1f51a40f86",
+        "group": "37cf765d3e2dadac",
         "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "chart",
+        "width": 11,
+        "height": 6,
+        "label": "charttt",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
@@ -1259,7 +1578,6 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "className": "",
         "x": 490,
         "y": 280,
         "wires": [
@@ -1270,8 +1588,8 @@
         "id": "eebcb8763bab4f63",
         "type": "ui_template",
         "z": "2121ca907b3ee80f",
-        "group": "3287af1f51a40f86",
-        "name": "",
+        "group": "37cf765d3e2dadac",
+        "name": "templateNumbers",
         "order": 2,
         "width": 0,
         "height": 0,
@@ -1280,9 +1598,499 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "className": "",
-        "x": 800,
+        "x": 830,
         "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d614f2284cc3f9c2",
+        "type": "inject",
+        "z": "e0e961b4aebdd3ff",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "7bb88c772ca1b039"
+            ]
+        ]
+    },
+    {
+        "id": "4a9e1d97c75e76e2",
+        "type": "mysql",
+        "z": "e0e961b4aebdd3ff",
+        "mydb": "dce9a25b40f40d81",
+        "name": "",
+        "x": 490,
+        "y": 240,
+        "wires": [
+            [
+                "8df1adbb998178f4"
+            ]
+        ]
+    },
+    {
+        "id": "8df1adbb998178f4",
+        "type": "debug",
+        "z": "e0e961b4aebdd3ff",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "7bb88c772ca1b039",
+        "type": "function",
+        "z": "e0e961b4aebdd3ff",
+        "name": "CREATE",
+        "func": "msg.topic = \"CREATE TABLE hearthealth (id INT(11) NULL, datum CHAR(50)  NULL, body CHAR(50) NULL, blutdruckOben INT(5) NULL, blutdruckUnten INT(5) NOT NULL, puls INT(5) NOT NULL) COLLATE='utf8mb4_unicode_ci' ENGINE=InnoDB;\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 240,
+        "wires": [
+            [
+                "4a9e1d97c75e76e2"
+            ]
+        ]
+    },
+    {
+        "id": "7773572b8b75cf9f",
+        "type": "mysql",
+        "z": "e0e961b4aebdd3ff",
+        "mydb": "dce9a25b40f40d81",
+        "name": "",
+        "x": 490,
+        "y": 320,
+        "wires": [
+            [
+                "138dab9cc060badd"
+            ]
+        ]
+    },
+    {
+        "id": "138dab9cc060badd",
+        "type": "debug",
+        "z": "e0e961b4aebdd3ff",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "b9df0bf4c8649520",
+        "type": "function",
+        "z": "e0e961b4aebdd3ff",
+        "name": "INSERT",
+        "func": "msg.topic = \"INSERT INTO hearthealth (id, datum, body, blutdruckOben, blutdruckUnten, puls) VALUES (3, 'beispieldatum', 'liegend', 55, 55, 55);\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 320,
+        "wires": [
+            [
+                "7773572b8b75cf9f"
+            ]
+        ]
+    },
+    {
+        "id": "a745a4603c441a4d",
+        "type": "inject",
+        "z": "e0e961b4aebdd3ff",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 320,
+        "wires": [
+            [
+                "b9df0bf4c8649520"
+            ]
+        ]
+    },
+    {
+        "id": "csv-node",
+        "type": "csv",
+        "z": "e0e961b4aebdd3ff",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "array",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
+        "x": 470,
+        "y": 400,
+        "wires": [
+            [
+                "function-node"
+            ]
+        ]
+    },
+    {
+        "id": "function-node",
+        "type": "function",
+        "z": "e0e961b4aebdd3ff",
+        "name": "CSV to SQL",
+        "func": "// Extract values from the msg.payload object\nlet id = msg.payload.id;\nlet datum = msg.payload.datum;\nlet body = msg.payload.body;\nlet blutdruckOben = msg.payload.blutdruckOben;\nlet blutdruckUnten = msg.payload.blutdruckUnten;\nlet puls = msg.payload.puls;\n\nmsg.topic = `INSERT INTO hearthealth (id, datum, body, blutdruckOben, blutdruckUnten, puls) VALUES (${id}, ${datum}, ${body}, ${blutdruckOben}, ${blutdruckUnten}, ${puls});`;\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 400,
+        "wires": [
+            [
+                "f8b0d4f6fa0e4671"
+            ]
+        ]
+    },
+    {
+        "id": "0cc83c644feea581",
+        "type": "template",
+        "z": "e0e961b4aebdd3ff",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "id,datum,body,blutdruckOben,blutdruckUnten,puls\n1,'06.05.2024 07:47','liegend',86,54,58\n2,06.05.2024 07:53','aufgestanden',118,75,123\n3,'27.04.2024 09:11','liegend',93,60,59\n4,'27.04.2024 09:13','aufgestanden',108,69,106\n5,'26.04.2024 09:02','liegend',99,64,60\n6,'26.04.2024 09:08','aufgestanden',116,82,101\n7,'24.04.2024 06:40','liegend',94,64,64\n8,'24.04.2024 06:42','aufgestanden',112,74,124\n9,'22.04.2024 07:43',''liegend',81,50,74\n10,'22.04.2024 07:47','aufgestanden',109,82,127\n11,'18.04.2024 07:55','liegend',99,67,59\n12,'18.04.2024 08:04','aufgestanden',114,74,91\n13,'19.04.2024 10:30','liegend',101,62,60\n14,'19.04.2024 10:32','aufgestanden',123,76,105\n15,'14.04.2024 12:02','liegend',100,62,65\n16,'14.04.2024 12:04','aufgestanden',118,76,112\n17,'15.04.2024 07:31','liegend',89,56,66\n18,'15.04.2024 07:35','aufgestanden',113,68,124\n19,'13.04.2024 08:27','liegend',93,60,59\n20,'13.04.2024 08:31','aufgestanden',113,74,112\n21,'12.04.2024 08:48','liegend',96,59,68\n22,'12.04.2024 08:59','aufgestanden',118,73,117",
+        "output": "str",
+        "x": 300,
+        "y": 400,
+        "wires": [
+            [
+                "csv-node"
+            ]
+        ]
+    },
+    {
+        "id": "e4c051b440e03c01",
+        "type": "inject",
+        "z": "e0e961b4aebdd3ff",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "0cc83c644feea581"
+            ]
+        ]
+    },
+    {
+        "id": "385c25e9ba650ae2",
+        "type": "debug",
+        "z": "e0e961b4aebdd3ff",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "f8b0d4f6fa0e4671",
+        "type": "mysql",
+        "z": "e0e961b4aebdd3ff",
+        "mydb": "dce9a25b40f40d81",
+        "name": "",
+        "x": 830,
+        "y": 400,
+        "wires": [
+            [
+                "385c25e9ba650ae2"
+            ]
+        ]
+    },
+    {
+        "id": "7707dc3a42cf9b5f",
+        "type": "ui_table",
+        "z": "e0e961b4aebdd3ff",
+        "group": "b6fb597d0fbb6208",
+        "name": "",
+        "order": 1,
+        "width": "11",
+        "height": "11",
+        "columns": [
+            {
+                "field": "id",
+                "title": "id",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "datum",
+                "title": "datum",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "blutdruckOben",
+                "title": "blutdruckOben",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "blutdruckUnten",
+                "title": "blutdruckUnten",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "puls",
+                "title": "puls",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 710,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "8039bccfd3092ff4",
+        "type": "mysql",
+        "z": "e0e961b4aebdd3ff",
+        "mydb": "dce9a25b40f40d81",
+        "name": "",
+        "x": 530,
+        "y": 560,
+        "wires": [
+            [
+                "800f34ea01d3af37",
+                "8e827b313ec0e977",
+                "7707dc3a42cf9b5f",
+                "48afa7a9bc0058bd"
+            ]
+        ]
+    },
+    {
+        "id": "800f34ea01d3af37",
+        "type": "debug",
+        "z": "e0e961b4aebdd3ff",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "dd8883ef4175b77d",
+        "type": "function",
+        "z": "e0e961b4aebdd3ff",
+        "name": "SELECT",
+        "func": "msg.topic = \"SELECT id, datum, body, blutdruckOben, blutdruckUnten, puls FROM hearthealth\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 560,
+        "wires": [
+            [
+                "8039bccfd3092ff4"
+            ]
+        ]
+    },
+    {
+        "id": "04b382ded5c6ec2f",
+        "type": "inject",
+        "z": "e0e961b4aebdd3ff",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 560,
+        "wires": [
+            [
+                "dd8883ef4175b77d"
+            ]
+        ]
+    },
+    {
+        "id": "8e827b313ec0e977",
+        "type": "ui_template",
+        "z": "e0e961b4aebdd3ff",
+        "group": "b6fb597d0fbb6208",
+        "name": "templatetable",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>\n<script> \nlet id = msg.payload.id;\nlet datum = msg.payload.datum;\nlet body = msg.payload.body;\nlet blutdruckOben = msg.payload.blutdruckOben;\nlet blutdruckUnten = msg.payload.blutdruckUnten;\nlet puls = msg.payload.puls;\n</script>\n<table>\n    <tr>\n        <th>id</th>\n        <th>datum</th>\n        <th>body</th>\n        <th>blutdruckOben</th>\n        <th>blutdruckUnten</th>\n        <th>puls</th>\n    </tr>\n    <tr>\n        <td>${id}</td>\n        <td>${datum}</td>\n        <td>${body}</td>\n        <td>${blutdruckOben}</td>\n        <td>${blutdruckUnten}</td>\n        <td>${puls}</td>\n    </tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 740,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "48afa7a9bc0058bd",
+        "type": "ui_chart",
+        "z": "e0e961b4aebdd3ff",
+        "name": "",
+        "group": "b6fb597d0fbb6208",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "Y-M-D",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "50",
+        "ymax": "200",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 710,
+        "y": 740,
         "wires": [
             []
         ]
