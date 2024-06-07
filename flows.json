@@ -38,6 +38,14 @@
         "env": []
     },
     {
+        "id": "ac2979ef39ddce11",
+        "type": "tab",
+        "label": "ChallengeVonDavid1",
+        "disabled": false,
+        "info": " - Random numbers sollen generiert werden\r\n - Diese Random numbers sollen in einem Web-Interface dargestellt werden\r\n - mit einem Tasteninput soll diese generierung aufhören \r\n - mit einem weiteren Tasteninput soll diese generierung wieder starten",
+        "env": []
+    },
+    {
         "id": "0478b31567810a5b",
         "type": "group",
         "z": "f3d5f4aa350bc8c7",
@@ -198,7 +206,37 @@
         ]
     },
     {
-        "id": "3aaffa94.740bee",
+        "id": "dce9a25b40f40d81",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "heart",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "03a85ce256ca9d57",
+        "type": "MySQLdatabase",
+        "name": "MySQL Server",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "iot_data",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "3230fb6a274c3faf",
+        "type": "ui_group",
+        "name": "Challenge 2",
+        "tab": "d18f7b47865312c4",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "8e3f6f5ad5e2511b",
         "type": "ui_base",
         "theme": {
             "name": "theme-dark",
@@ -220,8 +258,7 @@
                 "name": "Untitled Theme 1",
                 "default": "#4B7930",
                 "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "reset": false
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
             },
             "themeState": {
                 "base-color": {
@@ -273,16 +310,17 @@
                 "primary": "indigo",
                 "accents": "blue",
                 "warn": "red",
-                "background": "grey"
+                "background": "grey",
+                "palette": "light"
             }
         },
         "site": {
             "name": "Node-RED Dashboard",
             "hideToolbar": "false",
-            "allowSwipe": "true",
+            "allowSwipe": "mouse",
             "lockMenu": "true",
             "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
+            "dateFormat": "DD.MM.YYYY",
             "sizes": {
                 "sx": 48,
                 "sy": 48,
@@ -296,51 +334,59 @@
         }
     },
     {
-        "id": "dce9a25b40f40d81",
-        "type": "MySQLdatabase",
-        "name": "",
-        "host": "127.0.0.1",
-        "port": "3306",
-        "db": "heart",
-        "tz": "",
-        "charset": "UTF8"
-    },
-    {
-        "id": "03a85ce256ca9d57",
-        "type": "MySQLdatabase",
-        "name": "MySQL Server",
-        "host": "127.0.0.1",
-        "port": "3306",
-        "db": "iot_data",
-        "tz": "",
-        "charset": "UTF8"
-    },
-    {
-        "id": "d69605034ccd38ef",
+        "id": "d18f7b47865312c4",
         "type": "ui_tab",
-        "name": "Tab",
+        "name": "Challenge 2",
         "icon": "dashboard",
-        "order": 0
+        "disabled": false,
+        "hidden": false
     },
     {
-        "id": "37cf765d3e2dadac",
-        "type": "ui_group",
-        "name": "Group 1",
-        "tab": "d69605034ccd38ef",
-        "order": null,
-        "disp": true,
-        "width": "11",
-        "collapse": true
-    },
-    {
-        "id": "b6fb597d0fbb6208",
-        "type": "ui_group",
-        "name": "Group 2",
-        "tab": "d69605034ccd38ef",
+        "id": "019c43b59eea1d3c",
+        "type": "ui_tab",
+        "name": "HealthStatus",
+        "icon": "dashboard",
         "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "cb3dd29e8a5a9df0",
+        "type": "ui_group",
+        "name": "Table",
+        "tab": "019c43b59eea1d3c",
+        "order": 1,
         "disp": true,
-        "width": "11",
-        "collapse": true
+        "width": "14",
+        "collapse": false
+    },
+    {
+        "id": "db291e3f8144b203",
+        "type": "ui_tab",
+        "name": "Challenges von David",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5dcbe87c1cfa0f35",
+        "type": "ui_group",
+        "name": "Random Numbers Control",
+        "tab": "db291e3f8144b203",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "1184fa1d91ac2538",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "db291e3f8144b203",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
     },
     {
         "id": "fe82e6a1df43ae37",
@@ -1483,26 +1529,9 @@
         "wires": [
             [
                 "8aff1399de838c28",
-                "8935b8f9b04e1b65",
-                "341b13a59ea621a0"
+                "ed4030b985965e7d"
             ]
         ]
-    },
-    {
-        "id": "467f38923ed533c9",
-        "type": "debug",
-        "z": "2121ca907b3ee80f",
-        "name": "debug 10",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 740,
-        "y": 120,
-        "wires": []
     },
     {
         "id": "8aff1399de838c28",
@@ -1520,37 +1549,20 @@
         "y": 160,
         "wires": [
             [
-                "467f38923ed533c9",
-                "eebcb8763bab4f63"
+                "f1356c24d826da0f"
             ]
         ]
     },
     {
-        "id": "8935b8f9b04e1b65",
-        "type": "debug",
-        "z": "2121ca907b3ee80f",
-        "name": "debug 11",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 500,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "341b13a59ea621a0",
+        "id": "ed4030b985965e7d",
         "type": "ui_chart",
         "z": "2121ca907b3ee80f",
         "name": "",
-        "group": "37cf765d3e2dadac",
-        "order": 1,
-        "width": 11,
+        "group": "3230fb6a274c3faf",
+        "order": 2,
+        "width": 10,
         "height": 6,
-        "label": "charttt",
+        "label": "chart",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
@@ -1559,9 +1571,9 @@
         "dot": false,
         "ymin": "",
         "ymax": "",
-        "removeOlder": 1,
+        "removeOlder": "60",
         "removeOlderPoints": "",
-        "removeOlderUnit": "60",
+        "removeOlderUnit": "1",
         "cutout": 0,
         "useOneColor": false,
         "useUTC": false,
@@ -1578,27 +1590,27 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 490,
-        "y": 280,
+        "x": 530,
+        "y": 220,
         "wires": [
             []
         ]
     },
     {
-        "id": "eebcb8763bab4f63",
+        "id": "f1356c24d826da0f",
         "type": "ui_template",
         "z": "2121ca907b3ee80f",
-        "group": "37cf765d3e2dadac",
-        "name": "templateNumbers",
-        "order": 2,
-        "width": 0,
-        "height": 0,
+        "group": "3230fb6a274c3faf",
+        "name": "",
+        "order": 1,
+        "width": 10,
+        "height": 3,
         "format": "<p>Min: {{msg.payload.min}}</p>\n<p>Max: {{msg.payload.max}}</p>\n<p>Mean: {{msg.payload.mean}}</p>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 830,
+        "x": 880,
         "y": 160,
         "wires": [
             []
@@ -1625,8 +1637,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 120,
-        "y": 240,
+        "x": 140,
+        "y": 180,
         "wires": [
             [
                 "7bb88c772ca1b039"
@@ -1639,126 +1651,29 @@
         "z": "e0e961b4aebdd3ff",
         "mydb": "dce9a25b40f40d81",
         "name": "",
-        "x": 490,
-        "y": 240,
+        "x": 510,
+        "y": 180,
         "wires": [
-            [
-                "8df1adbb998178f4"
-            ]
+            []
         ]
-    },
-    {
-        "id": "8df1adbb998178f4",
-        "type": "debug",
-        "z": "e0e961b4aebdd3ff",
-        "name": "debug 13",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 660,
-        "y": 240,
-        "wires": []
     },
     {
         "id": "7bb88c772ca1b039",
         "type": "function",
         "z": "e0e961b4aebdd3ff",
         "name": "CREATE",
-        "func": "msg.topic = \"CREATE TABLE hearthealth (id INT(11) NULL, datum CHAR(50)  NULL, body CHAR(50) NULL, blutdruckOben INT(5) NULL, blutdruckUnten INT(5) NOT NULL, puls INT(5) NOT NULL) COLLATE='utf8mb4_unicode_ci' ENGINE=InnoDB;\"\n\nreturn msg;",
+        "func": "msg.topic = \"CREATE TABLE hearthealth (id INT(11) NULL, datum DATE NULL, body CHAR(50) NULL, blutdruckOben INT(5) NULL, blutdruckUnten INT(5) NOT NULL, puls INT(5) NOT NULL) COLLATE='utf8mb4_unicode_ci' ENGINE=InnoDB;\"\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 240,
+        "x": 340,
+        "y": 180,
         "wires": [
             [
                 "4a9e1d97c75e76e2"
-            ]
-        ]
-    },
-    {
-        "id": "7773572b8b75cf9f",
-        "type": "mysql",
-        "z": "e0e961b4aebdd3ff",
-        "mydb": "dce9a25b40f40d81",
-        "name": "",
-        "x": 490,
-        "y": 320,
-        "wires": [
-            [
-                "138dab9cc060badd"
-            ]
-        ]
-    },
-    {
-        "id": "138dab9cc060badd",
-        "type": "debug",
-        "z": "e0e961b4aebdd3ff",
-        "name": "debug 14",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 660,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "b9df0bf4c8649520",
-        "type": "function",
-        "z": "e0e961b4aebdd3ff",
-        "name": "INSERT",
-        "func": "msg.topic = \"INSERT INTO hearthealth (id, datum, body, blutdruckOben, blutdruckUnten, puls) VALUES (3, 'beispieldatum', 'liegend', 55, 55, 55);\"\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 320,
-        "y": 320,
-        "wires": [
-            [
-                "7773572b8b75cf9f"
-            ]
-        ]
-    },
-    {
-        "id": "a745a4603c441a4d",
-        "type": "inject",
-        "z": "e0e961b4aebdd3ff",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 320,
-        "wires": [
-            [
-                "b9df0bf4c8649520"
             ]
         ]
     },
@@ -1778,7 +1693,7 @@
         "include_empty_strings": false,
         "include_null_values": false,
         "x": 470,
-        "y": 400,
+        "y": 240,
         "wires": [
             [
                 "function-node"
@@ -1789,16 +1704,16 @@
         "id": "function-node",
         "type": "function",
         "z": "e0e961b4aebdd3ff",
-        "name": "CSV to SQL",
-        "func": "// Extract values from the msg.payload object\nlet id = msg.payload.id;\nlet datum = msg.payload.datum;\nlet body = msg.payload.body;\nlet blutdruckOben = msg.payload.blutdruckOben;\nlet blutdruckUnten = msg.payload.blutdruckUnten;\nlet puls = msg.payload.puls;\n\nmsg.topic = `INSERT INTO hearthealth (id, datum, body, blutdruckOben, blutdruckUnten, puls) VALUES (${id}, ${datum}, ${body}, ${blutdruckOben}, ${blutdruckUnten}, ${puls});`;\n\n\nreturn msg;",
+        "name": "CSV to INSERT",
+        "func": "// Extract values from the msg.payload object\nlet id = msg.payload.id;\nlet datum = msg.payload.datum;\nlet body = msg.payload.body;\nlet blutdruckOben = msg.payload.blutdruckOben;\nlet blutdruckUnten = msg.payload.blutdruckUnten;\nlet puls = msg.payload.puls;\n\n\nmsg.topic = `INSERT INTO hearthealth (id, datum, body, blutdruckOben, blutdruckUnten, puls) VALUES (${id}, ${datum}, ${body}, ${blutdruckOben}, ${blutdruckUnten}, ${puls});`;\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 400,
+        "x": 660,
+        "y": 240,
         "wires": [
             [
                 "f8b0d4f6fa0e4671"
@@ -1814,10 +1729,10 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "id,datum,body,blutdruckOben,blutdruckUnten,puls\n1,'06.05.2024 07:47','liegend',86,54,58\n2,06.05.2024 07:53','aufgestanden',118,75,123\n3,'27.04.2024 09:11','liegend',93,60,59\n4,'27.04.2024 09:13','aufgestanden',108,69,106\n5,'26.04.2024 09:02','liegend',99,64,60\n6,'26.04.2024 09:08','aufgestanden',116,82,101\n7,'24.04.2024 06:40','liegend',94,64,64\n8,'24.04.2024 06:42','aufgestanden',112,74,124\n9,'22.04.2024 07:43',''liegend',81,50,74\n10,'22.04.2024 07:47','aufgestanden',109,82,127\n11,'18.04.2024 07:55','liegend',99,67,59\n12,'18.04.2024 08:04','aufgestanden',114,74,91\n13,'19.04.2024 10:30','liegend',101,62,60\n14,'19.04.2024 10:32','aufgestanden',123,76,105\n15,'14.04.2024 12:02','liegend',100,62,65\n16,'14.04.2024 12:04','aufgestanden',118,76,112\n17,'15.04.2024 07:31','liegend',89,56,66\n18,'15.04.2024 07:35','aufgestanden',113,68,124\n19,'13.04.2024 08:27','liegend',93,60,59\n20,'13.04.2024 08:31','aufgestanden',113,74,112\n21,'12.04.2024 08:48','liegend',96,59,68\n22,'12.04.2024 08:59','aufgestanden',118,73,117",
+        "template": "id,datum,body,blutdruckOben,blutdruckUnten,puls\n1,'2024-05-06','liegend',86,54,58\n2,'2024-05-06','aufgestanden',118,75,123\n3,'2024-04-27','liegend',93,60,59\n4,'2024-04-27','aufgestanden',108,69,106\n5,'2024-04-26','liegend',99,64,60\n6,'2024-04-26','aufgestanden',116,82,101\n7,'2024-04-24','liegend',94,64,64\n8,'2024-04-24','aufgestanden',112,74,124\n9,'2024-04-22','liegend',81,50,74\n10,'2024-04-22','aufgestanden',109,82,127\n11,'2024-04-18','liegend',99,67,59\n12,'2024-04-18','aufgestanden',114,74,91\n13,'2024-04-19','liegend',101,62,60\n14,'2024-04-19','aufgestanden',123,76,105\n15,'2024-04-14','liegend',100,62,65\n16,'2024-04-14','aufgestanden',118,76,112\n17,'2024-04-15','liegend',89,56,66\n18,'2024-04-15','aufgestanden',113,68,124\n19,'2024-04-13','liegend',93,60,59\n20,'2024-04-13','aufgestanden',113,74,112\n21,'2024-04-12','liegend',96,59,68\n22,'2024-04-12','aufgestanden',118,73,117",
         "output": "str",
         "x": 300,
-        "y": 400,
+        "y": 240,
         "wires": [
             [
                 "csv-node"
@@ -1846,28 +1761,12 @@
         "payload": "",
         "payloadType": "date",
         "x": 130,
-        "y": 400,
+        "y": 240,
         "wires": [
             [
                 "0cc83c644feea581"
             ]
         ]
-    },
-    {
-        "id": "385c25e9ba650ae2",
-        "type": "debug",
-        "z": "e0e961b4aebdd3ff",
-        "name": "debug 15",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 980,
-        "y": 400,
-        "wires": []
     },
     {
         "id": "f8b0d4f6fa0e4671",
@@ -1876,79 +1775,10 @@
         "mydb": "dce9a25b40f40d81",
         "name": "",
         "x": 830,
-        "y": 400,
+        "y": 240,
         "wires": [
-            [
-                "385c25e9ba650ae2"
-            ]
+            []
         ]
-    },
-    {
-        "id": "7707dc3a42cf9b5f",
-        "type": "ui_table",
-        "z": "e0e961b4aebdd3ff",
-        "group": "b6fb597d0fbb6208",
-        "name": "",
-        "order": 1,
-        "width": "11",
-        "height": "11",
-        "columns": [
-            {
-                "field": "id",
-                "title": "id",
-                "width": "",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "datum",
-                "title": "datum",
-                "width": "",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "blutdruckOben",
-                "title": "blutdruckOben",
-                "width": "",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "blutdruckUnten",
-                "title": "blutdruckUnten",
-                "width": "",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "puls",
-                "title": "puls",
-                "width": "",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            }
-        ],
-        "outputs": 0,
-        "cts": false,
-        "x": 710,
-        "y": 640,
-        "wires": []
     },
     {
         "id": "8039bccfd3092ff4",
@@ -1956,32 +1786,13 @@
         "z": "e0e961b4aebdd3ff",
         "mydb": "dce9a25b40f40d81",
         "name": "",
-        "x": 530,
-        "y": 560,
+        "x": 490,
+        "y": 320,
         "wires": [
             [
-                "800f34ea01d3af37",
-                "8e827b313ec0e977",
-                "7707dc3a42cf9b5f",
-                "48afa7a9bc0058bd"
+                "148a61c0ab3d25af"
             ]
         ]
-    },
-    {
-        "id": "800f34ea01d3af37",
-        "type": "debug",
-        "z": "e0e961b4aebdd3ff",
-        "name": "debug 16",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 560,
-        "wires": []
     },
     {
         "id": "dd8883ef4175b77d",
@@ -1995,8 +1806,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
-        "y": 560,
+        "x": 320,
+        "y": 320,
         "wires": [
             [
                 "8039bccfd3092ff4"
@@ -2024,8 +1835,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 160,
-        "y": 560,
+        "x": 120,
+        "y": 320,
         "wires": [
             [
                 "dd8883ef4175b77d"
@@ -2033,43 +1844,116 @@
         ]
     },
     {
-        "id": "8e827b313ec0e977",
+        "id": "629245320f156ab3",
         "type": "ui_template",
         "z": "e0e961b4aebdd3ff",
-        "group": "b6fb597d0fbb6208",
-        "name": "templatetable",
+        "group": "cb3dd29e8a5a9df0",
+        "name": "",
         "order": 2,
-        "width": 0,
-        "height": 0,
-        "format": "<div ng-bind-html=\"msg.payload\"></div>\n<script> \nlet id = msg.payload.id;\nlet datum = msg.payload.datum;\nlet body = msg.payload.body;\nlet blutdruckOben = msg.payload.blutdruckOben;\nlet blutdruckUnten = msg.payload.blutdruckUnten;\nlet puls = msg.payload.puls;\n</script>\n<table>\n    <tr>\n        <th>id</th>\n        <th>datum</th>\n        <th>body</th>\n        <th>blutdruckOben</th>\n        <th>blutdruckUnten</th>\n        <th>puls</th>\n    </tr>\n    <tr>\n        <td>${id}</td>\n        <td>${datum}</td>\n        <td>${body}</td>\n        <td>${blutdruckOben}</td>\n        <td>${blutdruckUnten}</td>\n        <td>${puls}</td>\n    </tr>\n</table>",
+        "width": 14,
+        "height": 12,
+        "format": "<table border=\"1\" style=\"width:100%\">\n    <thead>\n        <tr>\n            <th>Id</th>\n            <th>Datum</th>\n            <th>Body</th>\n            <th>BlutdruckOben</th>\n            <th>BlutdruckUnten</th>\n            <th>Puls</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr ng-repeat=\"item in msg.payload\" style=\"color: {{item.puls > 90 ? 'black' : 'white'}}; background-color: {{item.puls > 90 ? '#FFCCCB' : 'black'}}\">\n            <td>{{item.id}}</td>\n            <td>{{item.datum}}</td>\n            <td>{{item.body}}</td>\n            <td>{{item.blutdruckOben}}</td>\n            <td>{{item.blutdruckUnten}}</td>\n            <td ng-class=\"{'high-pulse': item.puls > 90}\">{{item.puls}}</td>\n        </tr>\n    </tbody>\n</table>\n\n<style>\n    td {\n    text-align: center;\n    }\n    .high-pulse {\n        color: red;\n    }\n    </style>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 740,
-        "y": 700,
+        "x": 820,
+        "y": 440,
         "wires": [
             []
         ]
     },
     {
-        "id": "48afa7a9bc0058bd",
-        "type": "ui_chart",
+        "id": "148a61c0ab3d25af",
+        "type": "function",
         "z": "e0e961b4aebdd3ff",
+        "name": "FormatDate",
+        "func": "for (let i=0; i < 22; i++) {\n    var date = msg.payload[i].datum\n    var convertDate = date.toISOString().split('T')[0]; \n    msg.payload[i].datum = convertDate;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 320,
+        "wires": [
+            [
+                "ea230f4a3817b47f"
+            ]
+        ]
+    },
+    {
+        "id": "ea230f4a3817b47f",
+        "type": "function",
+        "z": "e0e961b4aebdd3ff",
+        "name": "Sorting",
+        "func": "var arr = msg.payload\n    var sortedId = arr.sort(function(a, b){return a.id - b.id}); \n    /*.id um nach der id zu sortieren, a - b für aufsteigende Sotierung bei Nummern.\n        Bei Stringst toSorted() verwenden */\n    msg.payload = sortedId;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 380,
+        "wires": [
+            [
+                "3fcc979f072e9b2f",
+                "629245320f156ab3"
+            ]
+        ]
+    },
+    {
+        "id": "3fcc979f072e9b2f",
+        "type": "debug",
+        "z": "e0e961b4aebdd3ff",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "3347ecb3d69170f0",
+        "type": "ui_text",
+        "z": "e0e961b4aebdd3ff",
+        "group": "cb3dd29e8a5a9df0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Info",
+        "label": "Info:",
+        "format": " \"Normalerweise steigt der Puls nach dem Aufstehen um 10 – 20 Schläge pro Minute an\"",
+        "layout": "row-spread",
+        "x": 910,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "faf3ac9bb35c3e35",
+        "type": "ui_chart",
+        "z": "ac2979ef39ddce11",
         "name": "",
-        "group": "b6fb597d0fbb6208",
-        "order": 2,
+        "group": "5dcbe87c1cfa0f35",
+        "order": 0,
         "width": 0,
         "height": 0,
         "label": "chart",
         "chartType": "line",
         "legend": "false",
-        "xformat": "Y-M-D",
+        "xformat": "HH:mm:ss",
         "interpolate": "linear",
         "nodata": "",
         "dot": false,
-        "ymin": "50",
-        "ymax": "200",
+        "ymin": "0",
+        "ymax": "100",
         "removeOlder": 1,
         "removeOlderPoints": "",
         "removeOlderUnit": "3600",
@@ -2077,7 +1961,7 @@
         "useOneColor": false,
         "useUTC": false,
         "colors": [
-            "#1f77b4",
+            "#1aff40",
             "#aec7e8",
             "#ff7f0e",
             "#2ca02c",
@@ -2089,8 +1973,142 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 710,
-        "y": 740,
+        "x": 510,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "be1b5a83ad759be6",
+        "type": "function",
+        "z": "ac2979ef39ddce11",
+        "name": "RandomNumbers",
+        "func": "var random = parseFloat((Math.random() * 100).toFixed(2))\n\nmsg.payload = random;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 220,
+        "wires": [
+            [
+                "faf3ac9bb35c3e35",
+                "6a8c2e1796a28616"
+            ]
+        ]
+    },
+    {
+        "id": "6e0c945a31e755d6",
+        "type": "inject",
+        "z": "ac2979ef39ddce11",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 220,
+        "wires": [
+            [
+                "be1b5a83ad759be6"
+            ]
+        ]
+    },
+    {
+        "id": "986778a28c020afc",
+        "type": "ui_toast",
+        "z": "ac2979ef39ddce11",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "",
+        "name": "",
+        "x": 610,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "6a8c2e1796a28616",
+        "type": "ui_text",
+        "z": "ac2979ef39ddce11",
+        "group": "5dcbe87c1cfa0f35",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current Random Number",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 570,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "df0a3ca180b0b23f",
+        "type": "keypress",
+        "z": "ac2979ef39ddce11",
+        "key": "",
+        "x": 100,
+        "y": 320,
+        "wires": [
+            [
+                "be1b5a83ad759be6",
+                "5ec38d63fca4cee0"
+            ]
+        ]
+    },
+    {
+        "id": "5ec38d63fca4cee0",
+        "type": "debug",
+        "z": "ac2979ef39ddce11",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 280,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "81093c9dbc487b42",
+        "type": "ui_template",
+        "z": "ac2979ef39ddce11",
+        "group": "1184fa1d91ac2538",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n    (function($scope) {\n    document.onkeydown = function (e) {\n        let msg = {\"payload\": e.key,  \"topic\": \"keydown\"};\n        $scope.send(msg);\n    };\n    \n    document.onkeyup = function (e) {\n        let msg = {\"payload\": e.key, \"topic\": \"keyup\"};\n        $scope.send(msg);\n    };\n})(scope);\n</script>\n\n\n/* \n\n<!DOCTYPE html>\n<html>\n<body>\n\n<script>\n  // Function to handle keydown events\n  function keyDownHandler(event) {\n    if (event.code === \"Space\" || event.which === 32) {\n      window.alert(\"Hello, World!\");\n    }\n  }\n\n  // Attach the keydown event listener to the document\n  document.addEventListener(\"keydown\", keyDownHandler);\n</script>\n\n</body>\n</html>\n\n\n*/",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 120,
+        "y": 480,
         "wires": [
             []
         ]
