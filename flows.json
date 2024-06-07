@@ -24,6 +24,14 @@
         "env": []
     },
     {
+        "id": "b1ab6cf20806df42",
+        "type": "tab",
+        "label": "Scoring_Points_Approach_Nurit",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "3aaffa94.740bee",
         "type": "ui_base",
         "theme": {
@@ -120,33 +128,6 @@
         }
     },
     {
-        "id": "6dec04321af50090",
-        "type": "mqtt-broker",
-        "name": "RaspberryPi",
-        "broker": "localhost",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
         "id": "d6fdf9d67a9cd17c",
         "type": "ui_spacer",
         "z": "0f3c7658c2562ffb",
@@ -235,16 +216,6 @@
         "hidden": false
     },
     {
-        "id": "93fae4f98fb26898",
-        "type": "ui_group",
-        "name": "Function",
-        "tab": "a07e435a3a0251e7",
-        "order": 1,
-        "disp": true,
-        "width": 10,
-        "collapse": false
-    },
-    {
         "id": "a07e435a3a0251e7",
         "type": "ui_tab",
         "name": "Chart",
@@ -252,6 +223,29 @@
         "order": 1,
         "disabled": false,
         "hidden": false
+    },
+    {
+        "id": "e70c4ee9a34823a6",
+        "type": "gauth",
+        "name": "service-account@scoringpoints.iam.gserviceaccount.com"
+    },
+    {
+        "id": "5fc41787b96015b4",
+        "type": "ui_tab",
+        "name": "ScoringPoints",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "900c1140b157ebc4",
+        "type": "ui_group",
+        "name": "TotalScore",
+        "tab": "5fc41787b96015b4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
     },
     {
         "id": "c618d9de260cbf90",
@@ -554,6 +548,246 @@
         "statusType": "auto",
         "x": 540,
         "y": 120,
+        "wires": []
+    },
+    {
+        "id": "af6806fffd53f74c",
+        "type": "GSheet",
+        "z": "b1ab6cf20806df42",
+        "creds": "e70c4ee9a34823a6",
+        "method": "update",
+        "action": "",
+        "sheet": "1gZWCYP4HNh-zcYIEgb4Dyuv-509liQO8SPY4fmOzlBI",
+        "cells": "Tabellenblatt1!A30:B32",
+        "flatten": false,
+        "name": "",
+        "x": 550,
+        "y": 300,
+        "wires": [
+            [
+                "3f8b3b8e33f30921"
+            ]
+        ]
+    },
+    {
+        "id": "6e64414fb585d557",
+        "type": "inject",
+        "z": "b1ab6cf20806df42",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"Task\":\"Task 1\",\"Punkte\":40},{\"Task\":\"Task 2\",\"Punkte\":50}]",
+        "payloadType": "json",
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "ccd4f6cf49fbe206"
+            ]
+        ]
+    },
+    {
+        "id": "3f8b3b8e33f30921",
+        "type": "debug",
+        "z": "b1ab6cf20806df42",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "ccd4f6cf49fbe206",
+        "type": "function",
+        "z": "b1ab6cf20806df42",
+        "name": "function 18",
+        "func": "var input = [];\n\nfor(var i = 0; i < msg.payload.length; i++){\n     input.push(\n        [\n            msg.payload[i].Task,\n            msg.payload[i].Punkte\n        ]\n    )\n}\n\nmsg.payload = input;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 300,
+        "wires": [
+            [
+                "af6806fffd53f74c"
+            ]
+        ]
+    },
+    {
+        "id": "80d3aaffde825687",
+        "type": "GSheet",
+        "z": "b1ab6cf20806df42",
+        "creds": "e70c4ee9a34823a6",
+        "method": "get",
+        "action": "",
+        "sheet": "1gZWCYP4HNh-zcYIEgb4Dyuv-509liQO8SPY4fmOzlBI",
+        "cells": "Tabellenblatt1!A2:B28",
+        "flatten": false,
+        "name": "",
+        "x": 530,
+        "y": 360,
+        "wires": [
+            [
+                "3f8b3b8e33f30921"
+            ]
+        ]
+    },
+    {
+        "id": "b84a844a6428055b",
+        "type": "GSheet",
+        "z": "b1ab6cf20806df42",
+        "creds": "e70c4ee9a34823a6",
+        "method": "get",
+        "action": "",
+        "sheet": "1gZWCYP4HNh-zcYIEgb4Dyuv-509liQO8SPY4fmOzlBI",
+        "cells": "Tabellenblatt1!C2:D28",
+        "flatten": false,
+        "name": "",
+        "x": 530,
+        "y": 420,
+        "wires": [
+            [
+                "3f8b3b8e33f30921"
+            ]
+        ]
+    },
+    {
+        "id": "e68aef022e73e977",
+        "type": "inject",
+        "z": "b1ab6cf20806df42",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 420,
+        "wires": [
+            [
+                "b84a844a6428055b",
+                "aa7e2f8d83545b3b",
+                "80d3aaffde825687",
+                "55c10cebf72d9441"
+            ]
+        ]
+    },
+    {
+        "id": "8050753a858aef39",
+        "type": "ui_gauge",
+        "z": "b1ab6cf20806df42",
+        "name": "",
+        "group": "900c1140b157ebc4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Total Score Nurit",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#cdf4cd",
+            "#0ff554",
+            "#05612d"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 720,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "aa7e2f8d83545b3b",
+        "type": "GSheet",
+        "z": "b1ab6cf20806df42",
+        "creds": "e70c4ee9a34823a6",
+        "method": "get",
+        "action": "",
+        "sheet": "1gZWCYP4HNh-zcYIEgb4Dyuv-509liQO8SPY4fmOzlBI",
+        "cells": "Tabellenblatt1!B28",
+        "flatten": false,
+        "name": "",
+        "x": 530,
+        "y": 460,
+        "wires": [
+            [
+                "8050753a858aef39"
+            ]
+        ]
+    },
+    {
+        "id": "55c10cebf72d9441",
+        "type": "GSheet",
+        "z": "b1ab6cf20806df42",
+        "creds": "e70c4ee9a34823a6",
+        "method": "get",
+        "action": "",
+        "sheet": "1gZWCYP4HNh-zcYIEgb4Dyuv-509liQO8SPY4fmOzlBI",
+        "cells": "Tabellenblatt1!D28",
+        "flatten": false,
+        "name": "",
+        "x": 530,
+        "y": 500,
+        "wires": [
+            [
+                "d7aea42dd058ee07"
+            ]
+        ]
+    },
+    {
+        "id": "d7aea42dd058ee07",
+        "type": "ui_gauge",
+        "z": "b1ab6cf20806df42",
+        "name": "",
+        "group": "900c1140b157ebc4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Total Score David",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#cdf4cd",
+            "#0ff554",
+            "#05612d"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 730,
+        "y": 500,
         "wires": []
     }
 ]
