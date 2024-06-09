@@ -32,6 +32,76 @@
         "env": []
     },
     {
+        "id": "bade3fac60495ab4",
+        "type": "group",
+        "z": "b1ab6cf20806df42",
+        "name": "Update Data Nurit",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "d166c4e5cf00e08b",
+            "2",
+            "4",
+            "af6806fffd53f74c",
+            "6c2bb8ce1d8f1bdb",
+            "53923ac23804d2fa",
+            "a68c7b8bde5ab81e",
+            "47d6c21164881063"
+        ],
+        "x": 34,
+        "y": 19,
+        "w": 892,
+        "h": 142
+    },
+    {
+        "id": "47a8975b0a4110e9",
+        "type": "group",
+        "z": "b1ab6cf20806df42",
+        "name": "Get Data",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "80d3aaffde825687",
+            "e68aef022e73e977",
+            "8050753a858aef39",
+            "aa7e2f8d83545b3b",
+            "55c10cebf72d9441",
+            "d7aea42dd058ee07",
+            "ba7db1ef8750cc94",
+            "4b9b74dcad811324",
+            "4f2c3ec250827f24"
+        ],
+        "x": 34,
+        "y": 339,
+        "w": 652,
+        "h": 202
+    },
+    {
+        "id": "e6dbbc1ac298c2bf",
+        "type": "group",
+        "z": "b1ab6cf20806df42",
+        "name": "Update Data David",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b231a5bf578d7c18",
+            "e2d1043b1f663c31",
+            "b20837886dc805a0",
+            "e5e64d88d61bf806",
+            "7f8784285b05cf7c",
+            "cf25fcb8ad44853c",
+            "8d3e26811c7d1701",
+            "2517fbd7f557ef0b"
+        ],
+        "x": 34,
+        "y": 179,
+        "w": 892,
+        "h": 142
+    },
+    {
         "id": "3aaffa94.740bee",
         "type": "ui_base",
         "theme": {
@@ -216,15 +286,6 @@
         "hidden": false
     },
     {
-        "id": "a07e435a3a0251e7",
-        "type": "ui_tab",
-        "name": "Chart",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "e70c4ee9a34823a6",
         "type": "gauth",
         "name": "service-account@scoringpoints.iam.gserviceaccount.com"
@@ -244,8 +305,178 @@
         "tab": "5fc41787b96015b4",
         "order": 1,
         "disp": true,
-        "width": "6",
+        "width": "21",
         "collapse": false
+    },
+    {
+        "id": "f99ae011ad1f9f82",
+        "type": "ui_spacer",
+        "z": "b1ab6cf20806df42",
+        "name": "spacer",
+        "group": "900c1140b157ebc4",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "97eb2a92a0b7e951",
+        "type": "ui_spacer",
+        "z": "b1ab6cf20806df42",
+        "name": "spacer",
+        "group": "900c1140b157ebc4",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "e806558c86fe401a",
+        "type": "ui_spacer",
+        "z": "b1ab6cf20806df42",
+        "name": "spacer",
+        "group": "900c1140b157ebc4",
+        "order": 11,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "462526691cf49ac0",
+        "type": "ui_spacer",
+        "z": "b1ab6cf20806df42",
+        "name": "spacer",
+        "group": "900c1140b157ebc4",
+        "order": 12,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "c6aab0df2e968ad1",
+        "type": "ui_spacer",
+        "z": "b1ab6cf20806df42",
+        "name": "spacer",
+        "group": "900c1140b157ebc4",
+        "order": 13,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "b684e1f6766a22ff",
+        "type": "ui_spacer",
+        "z": "b1ab6cf20806df42",
+        "name": "spacer",
+        "group": "900c1140b157ebc4",
+        "order": 14,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "bf15f52b90410078",
+        "type": "ui_spacer",
+        "z": "b1ab6cf20806df42",
+        "name": "spacer",
+        "group": "900c1140b157ebc4",
+        "order": 15,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "e37f52c86a861d7a",
+        "type": "ui_spacer",
+        "z": "b1ab6cf20806df42",
+        "name": "spacer",
+        "group": "900c1140b157ebc4",
+        "order": 16,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "0874bdce4e7ef204",
+        "type": "ui_spacer",
+        "z": "b1ab6cf20806df42",
+        "name": "spacer",
+        "group": "900c1140b157ebc4",
+        "order": 17,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "0f74278d61ce48fc",
+        "type": "ui_spacer",
+        "z": "b1ab6cf20806df42",
+        "name": "spacer",
+        "group": "900c1140b157ebc4",
+        "order": 18,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "a2199a463bd5fb5a",
+        "type": "ui_spacer",
+        "z": "b1ab6cf20806df42",
+        "name": "spacer",
+        "group": "900c1140b157ebc4",
+        "order": 21,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "a9c085e66270516d",
+        "type": "ui_spacer",
+        "z": "b1ab6cf20806df42",
+        "name": "spacer",
+        "group": "900c1140b157ebc4",
+        "order": 22,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "a569081261611373",
+        "type": "ui_spacer",
+        "z": "b1ab6cf20806df42",
+        "name": "spacer",
+        "group": "900c1140b157ebc4",
+        "order": 23,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "c3d76adbd30f7e49",
+        "type": "ui_spacer",
+        "z": "b1ab6cf20806df42",
+        "name": "spacer",
+        "group": "900c1140b157ebc4",
+        "order": 24,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "e7cff62173a20e79",
+        "type": "ui_spacer",
+        "z": "b1ab6cf20806df42",
+        "name": "spacer",
+        "group": "900c1140b157ebc4",
+        "order": 25,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "872fe80485439bf6",
+        "type": "ui_spacer",
+        "z": "b1ab6cf20806df42",
+        "name": "spacer",
+        "group": "900c1140b157ebc4",
+        "order": 26,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "3370f52032461c80",
+        "type": "ui_spacer",
+        "z": "b1ab6cf20806df42",
+        "name": "spacer",
+        "group": "900c1140b157ebc4",
+        "order": 27,
+        "width": 5,
+        "height": 1
     },
     {
         "id": "c618d9de260cbf90",
@@ -551,120 +782,22 @@
         "wires": []
     },
     {
-        "id": "af6806fffd53f74c",
-        "type": "GSheet",
-        "z": "b1ab6cf20806df42",
-        "creds": "e70c4ee9a34823a6",
-        "method": "update",
-        "action": "",
-        "sheet": "1gZWCYP4HNh-zcYIEgb4Dyuv-509liQO8SPY4fmOzlBI",
-        "cells": "Tabellenblatt1!A30:B32",
-        "flatten": false,
-        "name": "",
-        "x": 550,
-        "y": 300,
-        "wires": [
-            [
-                "3f8b3b8e33f30921"
-            ]
-        ]
-    },
-    {
-        "id": "6e64414fb585d557",
-        "type": "inject",
-        "z": "b1ab6cf20806df42",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "[{\"Task\":\"Task 1\",\"Punkte\":40},{\"Task\":\"Task 2\",\"Punkte\":50}]",
-        "payloadType": "json",
-        "x": 170,
-        "y": 300,
-        "wires": [
-            [
-                "ccd4f6cf49fbe206"
-            ]
-        ]
-    },
-    {
-        "id": "3f8b3b8e33f30921",
-        "type": "debug",
-        "z": "b1ab6cf20806df42",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "ccd4f6cf49fbe206",
-        "type": "function",
-        "z": "b1ab6cf20806df42",
-        "name": "function 18",
-        "func": "var input = [];\n\nfor(var i = 0; i < msg.payload.length; i++){\n     input.push(\n        [\n            msg.payload[i].Task,\n            msg.payload[i].Punkte\n        ]\n    )\n}\n\nmsg.payload = input;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 350,
-        "y": 300,
-        "wires": [
-            [
-                "af6806fffd53f74c"
-            ]
-        ]
-    },
-    {
         "id": "80d3aaffde825687",
         "type": "GSheet",
         "z": "b1ab6cf20806df42",
+        "g": "47a8975b0a4110e9",
         "creds": "e70c4ee9a34823a6",
         "method": "get",
         "action": "",
         "sheet": "1gZWCYP4HNh-zcYIEgb4Dyuv-509liQO8SPY4fmOzlBI",
-        "cells": "Tabellenblatt1!A2:B28",
+        "cells": "Tabellenblatt1!C3:D27",
         "flatten": false,
         "name": "",
-        "x": 530,
-        "y": 360,
-        "wires": [
-            [
-                "3f8b3b8e33f30921"
-            ]
-        ]
-    },
-    {
-        "id": "b84a844a6428055b",
-        "type": "GSheet",
-        "z": "b1ab6cf20806df42",
-        "creds": "e70c4ee9a34823a6",
-        "method": "get",
-        "action": "",
-        "sheet": "1gZWCYP4HNh-zcYIEgb4Dyuv-509liQO8SPY4fmOzlBI",
-        "cells": "Tabellenblatt1!C2:D28",
-        "flatten": false,
-        "name": "",
-        "x": 530,
+        "x": 370,
         "y": 420,
         "wires": [
             [
-                "3f8b3b8e33f30921"
+                "ba7db1ef8750cc94"
             ]
         ]
     },
@@ -672,6 +805,7 @@
         "id": "e68aef022e73e977",
         "type": "inject",
         "z": "b1ab6cf20806df42",
+        "g": "47a8975b0a4110e9",
         "name": "",
         "props": [
             {
@@ -682,21 +816,21 @@
                 "vt": "str"
             }
         ],
-        "repeat": "60",
+        "repeat": "30",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 330,
-        "y": 420,
+        "x": 150,
+        "y": 440,
         "wires": [
             [
-                "b84a844a6428055b",
                 "aa7e2f8d83545b3b",
                 "80d3aaffde825687",
-                "55c10cebf72d9441"
+                "55c10cebf72d9441",
+                "4b9b74dcad811324"
             ]
         ]
     },
@@ -704,11 +838,12 @@
         "id": "8050753a858aef39",
         "type": "ui_gauge",
         "z": "b1ab6cf20806df42",
+        "g": "47a8975b0a4110e9",
         "name": "",
         "group": "900c1140b157ebc4",
-        "order": 0,
-        "width": 0,
-        "height": 0,
+        "order": 19,
+        "width": 6,
+        "height": 4,
         "gtype": "gage",
         "title": "Total Score Nurit",
         "label": "units",
@@ -722,7 +857,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 720,
+        "x": 560,
         "y": 460,
         "wires": []
     },
@@ -730,6 +865,7 @@
         "id": "aa7e2f8d83545b3b",
         "type": "GSheet",
         "z": "b1ab6cf20806df42",
+        "g": "47a8975b0a4110e9",
         "creds": "e70c4ee9a34823a6",
         "method": "get",
         "action": "",
@@ -737,7 +873,7 @@
         "cells": "Tabellenblatt1!B28",
         "flatten": false,
         "name": "",
-        "x": 530,
+        "x": 370,
         "y": 460,
         "wires": [
             [
@@ -749,6 +885,7 @@
         "id": "55c10cebf72d9441",
         "type": "GSheet",
         "z": "b1ab6cf20806df42",
+        "g": "47a8975b0a4110e9",
         "creds": "e70c4ee9a34823a6",
         "method": "get",
         "action": "",
@@ -756,7 +893,7 @@
         "cells": "Tabellenblatt1!D28",
         "flatten": false,
         "name": "",
-        "x": 530,
+        "x": 370,
         "y": 500,
         "wires": [
             [
@@ -768,11 +905,12 @@
         "id": "d7aea42dd058ee07",
         "type": "ui_gauge",
         "z": "b1ab6cf20806df42",
+        "g": "47a8975b0a4110e9",
         "name": "",
         "group": "900c1140b157ebc4",
-        "order": 0,
-        "width": 0,
-        "height": 0,
+        "order": 20,
+        "width": 6,
+        "height": 4,
         "gtype": "gage",
         "title": "Total Score David",
         "label": "units",
@@ -786,8 +924,446 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 730,
+        "x": 570,
         "y": 500,
         "wires": []
+    },
+    {
+        "id": "ba7db1ef8750cc94",
+        "type": "ui_template",
+        "z": "b1ab6cf20806df42",
+        "g": "47a8975b0a4110e9",
+        "group": "900c1140b157ebc4",
+        "name": "Tabelle-David",
+        "order": 3,
+        "width": 6,
+        "height": 6,
+        "format": "<h3> David Aufgaben </h3>\n<table border=\"1\" style=\"width:100%\">\n    <thead>\n        <tr>\n            <th>Aufgabe</th>\n            <th>Punkte</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr ng-repeat=\"item in msg.payload\">\n            <td>{{item[0]}}</td>\n            <td>{{item[1]}}</td>\n        </tr>\n    </tbody>\n</table>\n\n<style>\n    td {\n        text-align: center;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 580,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4b9b74dcad811324",
+        "type": "GSheet",
+        "z": "b1ab6cf20806df42",
+        "g": "47a8975b0a4110e9",
+        "creds": "e70c4ee9a34823a6",
+        "method": "get",
+        "action": "",
+        "sheet": "1gZWCYP4HNh-zcYIEgb4Dyuv-509liQO8SPY4fmOzlBI",
+        "cells": "Tabellenblatt1!A3:B27",
+        "flatten": false,
+        "name": "",
+        "x": 370,
+        "y": 380,
+        "wires": [
+            [
+                "4f2c3ec250827f24"
+            ]
+        ]
+    },
+    {
+        "id": "4f2c3ec250827f24",
+        "type": "ui_template",
+        "z": "b1ab6cf20806df42",
+        "g": "47a8975b0a4110e9",
+        "group": "900c1140b157ebc4",
+        "name": "Tabelle-Nurit",
+        "order": 2,
+        "width": 6,
+        "height": 6,
+        "format": "<h3> Nurit Aufgaben </h3>\n<table border=\"1\" style=\"width:100%\">\n    <thead>\n        <tr>\n            <th>Aufgabe</th>\n            <th>Punkte</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr ng-repeat=\"item in msg.payload\">\n            <td>{{item[0]}}</td>\n            <td>{{item[1]}}</td>\n        </tr>\n    </tbody>\n</table>\n\n<style>\n    td {\n        text-align: center;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 570,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2",
+        "type": "function",
+        "z": "b1ab6cf20806df42",
+        "g": "bade3fac60495ab4",
+        "name": "",
+        "func": "msg.newData = [msg.payload.Task, msg.payload.Punkte];\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 60,
+        "wires": [
+            [
+                "6c2bb8ce1d8f1bdb"
+            ]
+        ]
+    },
+    {
+        "id": "4",
+        "type": "function",
+        "z": "b1ab6cf20806df42",
+        "g": "bade3fac60495ab4",
+        "name": "",
+        "func": "var selectRow = msg.num;\nvar nextRow = context.get('nextRow', nextRow) || selectRow;\n\nmsg.nextRow = nextRow;\nmsg.payload = [msg.newData];\nmsg.cells = `Tabellenblatt1!A${nextRow}:B${nextRow}`;\n\nnextRow++;\ncontext.set('nextRow', nextRow);\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 100,
+        "wires": [
+            [
+                "af6806fffd53f74c"
+            ]
+        ]
+    },
+    {
+        "id": "af6806fffd53f74c",
+        "type": "GSheet",
+        "z": "b1ab6cf20806df42",
+        "g": "bade3fac60495ab4",
+        "creds": "e70c4ee9a34823a6",
+        "method": "update",
+        "action": "",
+        "sheet": "1gZWCYP4HNh-zcYIEgb4Dyuv-509liQO8SPY4fmOzlBI",
+        "cells": "",
+        "flatten": false,
+        "name": "",
+        "x": 810,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6c2bb8ce1d8f1bdb",
+        "type": "GSheet",
+        "z": "b1ab6cf20806df42",
+        "g": "bade3fac60495ab4",
+        "creds": "e70c4ee9a34823a6",
+        "method": "get",
+        "action": "",
+        "sheet": "1gZWCYP4HNh-zcYIEgb4Dyuv-509liQO8SPY4fmOzlBI",
+        "cells": "Tabellenblatt1!A3:B27",
+        "flatten": false,
+        "name": "",
+        "x": 450,
+        "y": 60,
+        "wires": [
+            [
+                "4"
+            ]
+        ]
+    },
+    {
+        "id": "53923ac23804d2fa",
+        "type": "ui_form",
+        "z": "b1ab6cf20806df42",
+        "g": "bade3fac60495ab4",
+        "name": "Form-Nurit",
+        "label": "",
+        "group": "900c1140b157ebc4",
+        "order": 9,
+        "width": 4,
+        "height": 1,
+        "options": [
+            {
+                "label": "Task:",
+                "value": "Task",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Punkte:",
+                "value": "Punkte",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "Task": "",
+            "Punkte": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "msg.payload",
+        "topicType": "flow",
+        "splitLayout": "",
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "2"
+            ]
+        ]
+    },
+    {
+        "id": "a68c7b8bde5ab81e",
+        "type": "ui_text_input",
+        "z": "b1ab6cf20806df42",
+        "g": "bade3fac60495ab4",
+        "name": "Row-Nurit",
+        "label": "Reihe in der du starten willst",
+        "tooltip": "",
+        "group": "900c1140b157ebc4",
+        "order": 6,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "mode": "number",
+        "delay": "0",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "47d6c21164881063"
+            ]
+        ]
+    },
+    {
+        "id": "47d6c21164881063",
+        "type": "function",
+        "z": "b1ab6cf20806df42",
+        "g": "bade3fac60495ab4",
+        "name": "",
+        "func": "msg.num = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [
+                "4"
+            ]
+        ]
+    },
+    {
+        "id": "d166c4e5cf00e08b",
+        "type": "ui_text",
+        "z": "b1ab6cf20806df42",
+        "g": "bade3fac60495ab4",
+        "group": "900c1140b157ebc4",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Input Nurit",
+        "format": "",
+        "layout": "row-center",
+        "x": 810,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b231a5bf578d7c18",
+        "type": "ui_text",
+        "z": "b1ab6cf20806df42",
+        "g": "e6dbbc1ac298c2bf",
+        "group": "900c1140b157ebc4",
+        "order": 4,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Input David",
+        "format": "",
+        "layout": "row-center",
+        "x": 810,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e2d1043b1f663c31",
+        "type": "function",
+        "z": "b1ab6cf20806df42",
+        "g": "e6dbbc1ac298c2bf",
+        "name": "",
+        "func": "msg.newData = [msg.payload.Task, msg.payload.Punkte];\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 220,
+        "wires": [
+            [
+                "7f8784285b05cf7c"
+            ]
+        ]
+    },
+    {
+        "id": "b20837886dc805a0",
+        "type": "function",
+        "z": "b1ab6cf20806df42",
+        "g": "e6dbbc1ac298c2bf",
+        "name": "",
+        "func": "var selectRow = msg.num;\nvar nextRow = context.get('nextRow', nextRow)  || selectRow;\n\nmsg.nextRow = nextRow;\nmsg.payload = [msg.newData];\nmsg.cells = `Tabellenblatt1!C${nextRow}:D${nextRow}`;\n\nnextRow++;\ncontext.set('nextRow', nextRow);\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 260,
+        "wires": [
+            [
+                "e5e64d88d61bf806"
+            ]
+        ]
+    },
+    {
+        "id": "e5e64d88d61bf806",
+        "type": "GSheet",
+        "z": "b1ab6cf20806df42",
+        "g": "e6dbbc1ac298c2bf",
+        "creds": "e70c4ee9a34823a6",
+        "method": "update",
+        "action": "",
+        "sheet": "1gZWCYP4HNh-zcYIEgb4Dyuv-509liQO8SPY4fmOzlBI",
+        "cells": "",
+        "flatten": false,
+        "name": "",
+        "x": 810,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f8784285b05cf7c",
+        "type": "GSheet",
+        "z": "b1ab6cf20806df42",
+        "g": "e6dbbc1ac298c2bf",
+        "creds": "e70c4ee9a34823a6",
+        "method": "get",
+        "action": "",
+        "sheet": "1gZWCYP4HNh-zcYIEgb4Dyuv-509liQO8SPY4fmOzlBI",
+        "cells": "Tabellenblatt1!C3:D27",
+        "flatten": false,
+        "name": "",
+        "x": 450,
+        "y": 220,
+        "wires": [
+            [
+                "b20837886dc805a0"
+            ]
+        ]
+    },
+    {
+        "id": "cf25fcb8ad44853c",
+        "type": "ui_form",
+        "z": "b1ab6cf20806df42",
+        "g": "e6dbbc1ac298c2bf",
+        "name": "Form-David",
+        "label": "",
+        "group": "900c1140b157ebc4",
+        "order": 10,
+        "width": 4,
+        "height": 1,
+        "options": [
+            {
+                "label": "Task:",
+                "value": "Task",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Punkte:",
+                "value": "Punkte",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "Task": "",
+            "Punkte": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "msg.payload",
+        "topicType": "flow",
+        "splitLayout": "",
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "e2d1043b1f663c31"
+            ]
+        ]
+    },
+    {
+        "id": "8d3e26811c7d1701",
+        "type": "ui_text_input",
+        "z": "b1ab6cf20806df42",
+        "g": "e6dbbc1ac298c2bf",
+        "name": "Row-David",
+        "label": "Reihe in der du starten willst",
+        "tooltip": "",
+        "group": "900c1140b157ebc4",
+        "order": 7,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "mode": "number",
+        "delay": "0",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 280,
+        "wires": [
+            [
+                "2517fbd7f557ef0b"
+            ]
+        ]
+    },
+    {
+        "id": "2517fbd7f557ef0b",
+        "type": "function",
+        "z": "b1ab6cf20806df42",
+        "g": "e6dbbc1ac298c2bf",
+        "name": "",
+        "func": "msg.num = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 280,
+        "wires": [
+            [
+                "b20837886dc805a0"
+            ]
+        ]
     }
 ]
